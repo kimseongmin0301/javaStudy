@@ -5,14 +5,12 @@ public class LinearSearch {
         int i = 0;
 
         while (true) {
-            if (i == n) {
-                return -1;
-            }
             if (a[i] == key) {
-                return i;
+                break;
             }
             i++;
         }
+        return i == n ? -1 : i;
     }
 
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class LinearSearch {
 
         System.out.print("요솟수 : ");
         int num = stdIn.nextInt();
-        int[] x = new int[num];
+        int[] x = new int[num + 1];
 
         for (int i = 0; i < num; i++) {
             System.out.print("x[" + i + "] : ");
